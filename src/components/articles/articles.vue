@@ -1,10 +1,10 @@
 <template lang='jade'>
-transition-group.articles-wrapper.ui.three.stackable.cards(tag='div' name='box' @before-enter='beforeEnter' @enter='enter' @leave='leave')
+transition-group.articles-wrapper.ui.one.stackable.cards(tag='div' name='box' @before-enter='beforeEnter' @enter='enter' @leave='leave')
   article-box.article-box(v-for='(article, index) in articles' v-bind:key="article.id" v-bind:data-index='index' v-bind:item="article")
 </template>
 
 <script>
-import ArticleBox from './ArticleBox.vue'
+import ArticleBox from './articleBox'
 
 export default {
   mounted () {

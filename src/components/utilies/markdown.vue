@@ -27,7 +27,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='sass'>
-@import '../../node_modules/highlight.js/styles/monokai.css'
+@import '../../../node_modules/highlight.js/styles/monokai.css'
 .hljs
   border-radius: 4px
   overflow: hidden

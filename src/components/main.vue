@@ -1,14 +1,14 @@
 <template lang='jade'>
 div.main
   display-head
-  div.ui.container
+  div.ui.container.text
     articles
   //Articles
 </template>
 
 <script>
-import Articles from './Articles'
-import Head from './Head'
+import Articles from './articles/articles'
+import Head from './header/head'
 
 export default {
   data () {

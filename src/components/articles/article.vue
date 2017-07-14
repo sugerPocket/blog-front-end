@@ -1,11 +1,17 @@
 <template lang='jade'>
 div.article-wrapper
-  div.article.ui.container
+  .article-head
+    .head-content-wrapper.ui.container.text
+      h1.ui.header.massive Git 简易教程
+      .tags
+        span.title Tags :&nbsp;&nbsp;
+        .ui.mini.label web
+      p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+  div.article.ui.text.container
     .ui
-      h1.ui.article-header Git 简易教程
       div.article-meta
         .ui.teal.image.label
-          img(src='../assets/images/images.jpg')
+          img(src='../../assets/images/images.jpg')
           | sugerpocket
           .detail author
         span.like
@@ -18,11 +24,6 @@ div.article-wrapper
           span.github
             i.icon.github
       .ui.divider
-      .tags
-        span.title Tags :&nbsp;&nbsp;
-        .ui.mini.label web
-      .ui.raised.teal.segment.description
-        p Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
       Markdown.markdown(:content='content')
       h2.ui.dividing.header Comments
         .community-login
@@ -36,7 +37,7 @@ div.article-wrapper
       .ui.threaded.comments
         .comment
           a.avatar
-            img(src="../assets/images/images.jpg")
+            img(src="../../assets/images/images.jpg")
           .content
             a.author Matt
             .metadata
@@ -46,7 +47,7 @@ div.article-wrapper
               a.reply Reply
         .comment
           a.avatar
-            img(src="../assets/images/images.jpg")
+            img(src="../../assets/images/images.jpg")
           .content
             a.author Elliot Fu
             .metadata
@@ -58,7 +59,7 @@ div.article-wrapper
           .comments
             .comment
               .avatar
-                img(src="../assets/images/images.jpg")
+                img(src="../../assets/images/images.jpg")
               .content
                 a.author Jenny Hess
                 .metadata
@@ -68,7 +69,7 @@ div.article-wrapper
                   a.reply Reply
         .comment
           a.avatar
-            img(src="../assets/images/images.jpg")
+            img(src="../../assets/images/images.jpg")
           .content
             a.author Joe Henderson
             .metadata
@@ -79,7 +80,7 @@ div.article-wrapper
 </template>
 
 <script>
-import Markdown from './Markdown'
+import Markdown from '../utilies/markdown'
 
 export default {
   data () {
@@ -98,9 +99,24 @@ export default {
   .article-wrapper
     min-height: 100vh
     background: white
-  .article-header
-    line-height: 1.3
-    font-size: 34px !important
+  .article-head
+    background-color: lighten(#00b5ad, 3%)
+    background-repeat: no-repeat
+    background-position: center
+    height: 450px
+    position: relative
+    color: white
+  .head-content-wrapper
+    position: absolute
+    text-align: left
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+  h1
+    font-size: 4rem !important
+    color: white !important
+    @media(max-height: 767px)
+      font-size: 4rem !important
   .article-meta
     width: 100%
     padding: 0 2px
@@ -119,6 +135,10 @@ export default {
     .title
       font-size: 16px
     margin: 0.5em 0
+    .label
+      border: none
+      background: rgba(0, 0, 0, 0.2)
+      color: white
   .article
     padding: 100px 10px
     text-align: left

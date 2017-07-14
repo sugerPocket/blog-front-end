@@ -4,15 +4,16 @@ header.nav
     i.content.big.icon
     Breadcrumb.breadcrumb-wrapper
   div.menu-wrapper
-    div.ui.menu.teal.inverted
-      div.header.item Sugerpocket
-      router-link(:to='{ name: \'main\' }' tag='a').item Blogs
-      a.item Diaries
-      a.right.item About me
+    div.ui.menu.inverted.teal.huge
+      .ui.container
+        div.header.item Sugerpocket
+        router-link.item.right(:to='{ name: \'main\' }' tag='a').item Blogs
+        //a.item Diaries
+        //a.right.item About me
 </template>
 
 <script>
-import Breadcrumb from './Breadcrumb.vue'
+import Breadcrumb from './breadcrumb.vue'
 
 export default {
   data () {
@@ -33,7 +34,10 @@ export default {
     box-shadow: 0 1px 5px 0 rgba(41,85,115,.21)
     @media (max-width: 768px)
       display: none
-  .menu-wrapper
+  .item
+    border: none !important
+    &:before
+      background: transparent !important
   .breadcrumb-wrapper
     margin-left: 0.5em
   .menu

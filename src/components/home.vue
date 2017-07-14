@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import Topbar from './Topbar'
-import Modal from './Modal'
-import NewArticle from './NewArticle'
+import Topbar from './header/topbar'
+import Modal from './utilies/modal'
+import NewArticle from './articles/newArticle'
 
 export default {
   name: 'home',
@@ -29,7 +29,7 @@ export default {
 <style scoped lang='sass'>
 .home
   min-height: 100vh
-  background: #f0f0f0// radial-gradient(ellipse 59% 100% at 93% 30%,#f0d7ca,rgba(219,232,231,.2) 90%),radial-gradient(ellipse 59% 140% at 0 120%,#f0d7ca,rgba(219,232,231,.2) 60%),radial-gradient(ellipse 60% 100% at 5% 20%,#b3d7d5,rgba(219,232,231,.2) 100%),radial-gradient(ellipse 60% 100% at 100% 110%,#b3d7d5,rgba(219,232,231,.2) 90%)
+  background: #fafafa// radial-gradient(ellipse 59% 100% at 93% 30%,#f0d7ca,rgba(219,232,231,.2) 90%),radial-gradient(ellipse 59% 140% at 0 120%,#f0d7ca,rgba(219,232,231,.2) 60%),radial-gradient(ellipse 60% 100% at 5% 20%,#b3d7d5,rgba(219,232,231,.2) 100%),radial-gradient(ellipse 60% 100% at 100% 110%,#b3d7d5,rgba(219,232,231,.2) 90%)
 
 .head
   background-color: white
