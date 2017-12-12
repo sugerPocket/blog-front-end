@@ -1,4 +1,4 @@
-<template lang='jade'>
+<template lang='pug'>
 div.article-wrapper
   .article-head
     .head-content-wrapper.ui.container.text
@@ -95,7 +95,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang='sass'>
+<style scoped lang='stylus'>
   .article-wrapper
     min-height: 100vh
     background: white
@@ -126,7 +126,7 @@ export default {
     .like, .unhide, .article-nav
       margin-left: 0.5em
       vertical-align: baseline
-  .article-nav 
+  .article-nav
     float: right
     span
       line-height: 26px

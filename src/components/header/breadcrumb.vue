@@ -1,4 +1,4 @@
-<template lang='jade'>
+<template lang='pug'>
 nav.ui.big.breadcrumb
   template(v-for='breadcrumb in breadcrumbCollection')
     a.section(v-if='breadcrumb') {{breadcrumb}}
@@ -24,7 +24,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang='sass'>
+<style scoped lang='stylus'>
   .breadcrumb
     height: 50px
     line-height: 50px

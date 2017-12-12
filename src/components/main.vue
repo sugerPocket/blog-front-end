@@ -1,7 +1,7 @@
-<template lang='jade'>
+<template lang='pug'>
 div.main
   display-head
-  div.ui.container.text
+  div.ui.container
     articles
   //Articles
 </template>
@@ -21,8 +21,7 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang='sass'>
+<style scoped lang='stylus'>
   .container
     padding: 4em 0.5em
   .main

@@ -13,8 +13,8 @@ export default {
 }
 </script>
 
-<style lang='sass'>
-@import '../node_modules/semantic-ui/dist/semantic.min.css'
+<style lang='stylus'>
+@import '~semantic-ui/dist/semantic.min.css'
 
 #app 
   -webkit-font-smoothing: antialiased

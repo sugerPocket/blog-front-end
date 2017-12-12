@@ -1,4 +1,4 @@
-<template lang='jade'>
+<template lang='pug'>
 div(v-html='markdownContent' v-highlight='')
 </template>
 
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang='sass'>
+<style lang='stylus'>
 @import '../../../node_modules/highlight.js/styles/monokai.css'
 .hljs
   border-radius: 4px

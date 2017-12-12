@@ -1,48 +1,84 @@
-<template lang='jade'>
-  div.head
-    .head-content-wrapper
-      h1.ui.header.massive Sugerpocket
-      button.ui.button.huge(tabindex="0") 
-        i.ui.icon.github
-        | Github
-      button.ui.button.huge(tabindex="0")
-        | About me
+<template lang='pug'>
+div.head
+  .ui.container
+    login.login
+    .wrapper
+      .ui.huge.header Sugerpocket Blog
+      br
+      small 唯有想象，方能改变一切
+      small 想像力こそが、すべてを変える
+      small Imagination is the only thing that changes everything
+      br
+      .ui.buttons.big.teal.inverted
+        a.ui.button
+          i.ui.icon.github
+          | Github
+        .or(data-text='or')
+        a.ui.button
+          i.ui.icon.gitlab
+          | Gitlab
 </template>
 
 <script>
+import login from '../login'
 export default {
-
+  components: { login }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang='sass'>
+<style scoped lang='stylus'>
   .head
-    //background-image: url('https://opencollective.com/public/images/onboarding-bg.svg')
-    background-color: lighten(#00b5ad, 3%)
+    background: rgba(0, 0, 0, .3)
+    background-image: url('../../assets/images/coding-cat.jpg')
     background-repeat: no-repeat
+    background-size: cover
     background-position: center
-    height: 450px
-    position: relative
+    height: 100vh
     text-align: center
-  .head-content-wrapper
+    position: relative
+    z-index: 3
+    &:after
+      top: 0
+      left: 0
+      z-index: -1
+      width: 100%
+      height: 100%
+      display: block
+      content: ' '
+      position: absolute
+      background-color: rgba(0, 0, 0, .6)
+  @media (min-width: 0px)
+    .container
+      font-size: 1.2em
+  @media (min-width: 768px)
+    .container
+      font-size: 1.5em
+  @media (min-width: 992px)
+    .container
+      font-size: 2em
+  @media (min-width: 1200px)
+    .container
+      font-size: 2.5em
+  .container
+    height: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+  .or:before
+    background-color: #6dffff !important
+  .login
     position: absolute
-    left: 50%
-    top: 50%
-    transform: translate(-50%, -50%)
-  h1
-    font-size: 6rem !important
-    color: white !important
-    margin-bottom: 35px !important
-    @media(max-height: 767px)
-      font-size: 4rem !important
-  button
-    background: rgba(0, 0, 0, 0.1) !important
-    color: white !important
-    @media(min-height: 767px)
-      margin: 0 40px !important
-    transition: background 1s
-    &:hover
-      background: rgba(0, 0, 0, 0.15) !important
-  
+    top: 20px
+    right: 20px
+  .wrapper
+    border-left: 0.3em solid #6dffff
+    padding-left: 1em
+    text-align: left
+    & > *
+      text-align: left
+      color: white
+    small
+      display: block
+      margin-bottom: 0.4em
 </style>

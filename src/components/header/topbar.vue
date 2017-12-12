@@ -1,4 +1,4 @@
-<template lang='jade'>
+<template lang='pug'>
 header.nav
   //header.topbar
     i.content.big.icon
@@ -6,7 +6,7 @@ header.nav
   div.menu-wrapper
     div.ui.menu.inverted.teal.huge
       .ui.container
-        div.header.item Sugerpocket
+        div.header.item
         router-link.item.right(:to='{ name: \'main\' }' tag='a').item Blogs
         //a.item Diaries
         //a.right.item About me
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang='sass'>
+<style scoped lang='stylus'>
   header.topbar
     padding-left: 0.5em
     padding-right: 0.5em
